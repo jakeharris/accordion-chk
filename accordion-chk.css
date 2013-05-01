@@ -1,5 +1,5 @@
 /*
-	BOXCAT: ACCORDION
+	BOXKAT: ACCORDION-CHK
 	Author/Copyright: Jake Harris (javakatdesign@gmail.com)
 	
 	A purely-css accordion that allows for multiple content entries under each header (in case you need that for something, I don't know! Don't ask me, you're the web developer).
@@ -14,24 +14,30 @@
 			<label for="content-toggler-X" class="boxkat-accordion-lbl">
 				<span class="boxkat-accordion-atom boxkat-accordion-header">
 					<span class="boxkat-accordion-heading">YOUR HEADER HERE</span>
-					<span class="boxkat-accordion-subtitle">your alt text here</span>
+					<span class="boxkat-accordion-subtitle">YOUR ALT TEXT HERE</span>
+					<input type="checkbox" class="boxkat-accordion-chk" id="molecule-X-chk" />
+					<label for="molecule-X-chk" class="boxkat-accordion-lbl">
+						<i class="icon-plus boxkat-accordion-plus"></i>
+					</label>
 					<i class="icon-angle-down icon-2x boxkat-accordion-arrow"></i>
 				</span>
 			</label>
-			<input type="checkbox" class="boxkat-accordion-chk" id="molecule-X-chk" />
-			<label for="molecule-X-chk" class="boxkat-accordion-lbl"></label>
 			<div class="boxkat-accordion-content">
 				<div class="boxkat-accordion-atom">
 					<span class="boxkat-accordion-heading">YOUR HEADER HERE</span>
-					<span class="boxkat-accordion-subtitle">your alt text here</span>
+					<span class="boxkat-accordion-subtitle">YOUR ALT TEXT HERE</span>
+					<input type="checkbox" class="boxkat-accordion-chk" id="molecule-X-atom-Y-chk" />
+					<label for="molecule-X-atom-Y-chk" class="boxkat-accordion-lbl">
+						<i class="icon-plus boxkat-accordion-plus"></i>
+					</label>
 				</div>
-				<input type="checkbox" class="boxkat-accordion-chk" id="molecule-X-atom-Y-chk" />
-				<label for="molecule-X-atom-Y-chk" class="boxkat-accordion-lbl">thing</label>
 				<div class="boxkat-accordion-atom">
 					<span class="boxkat-accordion-heading">YOUR HEADER HERE</span>
+					<input type="checkbox" class="boxkat-accordion-chk" id="molecule-X-atom-Z-chk" />
+					<label for="molecule-X-atom-Z-chk" class="boxkat-accordion-lbl">
+						<i class="icon-plus boxkat-accordion-plus"></i>
+					</label>
 				</div>
-				<input type="checkbox" class="boxkat-accordion-chk" id="molecule-X-atom-Y1-chk" />
-				<label for="molecule-X-atom-Y1-chk" class="boxkat-accordion-lbl">other thing</label>
 			</div>
 		</div>
 	</div>
