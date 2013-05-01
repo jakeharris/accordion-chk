@@ -45,7 +45,6 @@
 }
 [class*="icon-"].boxkat-accordion-arrow {
 	font-size: 1.4em;
-	margin-top: -3px;
 	float: right;
 }
 .boxkat-accordion-molecule
@@ -130,7 +129,9 @@ input[type="checkbox"].boxkat-accordion-content-toggle:checked ~ .boxkat-accordi
 	display:none;
 }
 .boxkat-accordion-atom > .boxkat-accordion-lbl{
-	background:#f68026;
-	float:right;
-	font-size:1.5em;
+	background: #409737;
+	float: right;
+	font-size:1.4em;
+	padding: .5em .75em .5em .75em;
+	margin: -12px -12px -12px 12px;
 }
