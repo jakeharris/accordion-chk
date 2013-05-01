@@ -1,0 +1,127 @@
+/*
+	BOXCAT: ACCORDION
+	Author/Copyright: Jake Harris (javakatdesign@gmail.com)
+	
+	A purely-css accordion that allows for multiple content entries under each header (in case you need that for something, I don't know! Don't ask me, you're the web developer).
+	See boxkat-accordion-chk for accordion-checkgroup hybrids (for forms).
+	
+	NOTE: currently doesn't work with IE8. If you need that functionality, go grab IE9.js and put it in a conditional comment on your page.z
+	
+	USE:
+	<div class="boxkat-accordion">
+		<div class="boxkat-accordion-molecule">
+			<input type="checkbox" class="boxkat-accordion-content-toggle" id="content-toggler-X" />
+			<label for="content-toggler-X" class="boxkat-accordion-lbl">
+				<span class="boxkat-accordion-atom boxkat-accordion-header">
+					<span class="boxkat-accordion-heading">YOUR HEADER HERE</span>
+					<span class="boxkat-accordion-subtitle">your alt text here</span>
+					<i class="icon-angle-down icon-2x boxkat-accordion-arrow"></i>
+				</span>
+			</label>
+			<input type="checkbox" class="boxkat-accordion-chk" id="molecule-X-chk" />
+			<label for="molecule-X-chk" class="boxkat-accordion-lbl"></label>
+			<div class="boxkat-accordion-content">
+				<div class="boxkat-accordion-atom">
+					<span class="boxkat-accordion-heading">YOUR HEADER HERE</span>
+					<span class="boxkat-accordion-subtitle">your alt text here</span>
+				</div>
+				<input type="checkbox" class="boxkat-accordion-chk" id="molecule-X-atom-Y-chk" />
+				<label for="molecule-X-atom-Y-chk" class="boxkat-accordion-lbl">thing</label>
+				<div class="boxkat-accordion-atom">
+					<span class="boxkat-accordion-heading">YOUR HEADER HERE</span>
+				</div>
+				<input type="checkbox" class="boxkat-accordion-chk" id="molecule-X-atom-Y1-chk" />
+				<label for="molecule-X-atom-Y1-chk" class="boxkat-accordion-lbl">other thing</label>
+			</div>
+		</div>
+	</div>
+*/
+.boxkat-accordion {
+    min-width:60%;
+    width:auto;
+    display:inline-block;
+    color:#fff;
+    font-family: MS Shell Dlg, Calibri, Arial;
+}
+[class*="icon-"].boxkat-accordion-arrow {
+	font-size: 1.4em;
+	margin-top: -3px;
+	float: right;
+}
+.boxkat-accordion-molecule
+/* A molecule is a unit comprised of a header (what's displayed when the accordion is collapsed) and its content elements (the things that get displayed when the accordion expands). */
+ {
+	width:auto; 
+}
+.boxkat-accordion-atom {
+/* An atom is a unit comprised of all the text related to one concept on the page.  Atoms can be headers or content elements. */
+    color:#fff;
+    padding:.75em;
+    cursor:pointer;
+    display:block;
+	overflow:hidden;
+}
+input[type="checkbox"][value="on"].boxkat-accordion-content-toggle + label > .boxkat-accordion-header,
+input[type="checkbox"].boxkat-accordion-content-toggle.checked + label > .boxkat-accordion-header,
+input[type="checkbox"].boxkat-accordion-content-toggle:checked + label > .boxkat-accordion-header,
+.boxkat-accordion-atom.boxkat-accordion-header:hover 
+{
+	background: #496e9c;
+	-webkit-box-shadow: 0px 0px 10px rgba(73, 110, 156, 1);
+		-moz-box-shadow: 0px 0px 10px rgba(73, 110, 156, 1);
+			-ms-box-shadow: 0px 0px 10px rgba(73, 110, 156, 1);
+				-o-box-shadow: 0px 0px 10px rgba(73, 110, 156, 1);
+					box-shadow: 0px 0px 10px rgba(73, 110, 156, 1);
+}
+.boxkat-accordion-atom.boxkat-accordion-header {
+    background: #7b9fce;
+    color: #fff;
+	/*border: 1px solid #496e9c;*/
+    cursor:pointer;
+    position:relative;
+}
+input.boxkat-accordion-content-toggle {
+    display:none;
+}
+.boxkat-accordion-atom.boxkat-accordion-header > label.boxkat-accordion-lbl{
+    cursor:pointer;
+    color: #fff;
+}
+.boxkat-accordion-atom.boxkat-accordion-header .boxkat-accordion-heading {
+    color: #fff;  
+}
+.boxkat-accordion-atom.boxkat-accordion-header .boxkat-accordion-subtitle {
+    color: #183a65;
+}
+input[type="checkbox"][value="on"].boxkat-accordion-content-toggle ~ .boxkat-accordion-content,
+input[type="checkbox"].boxkat-accordion-content-toggle.checked ~ .boxkat-accordion-content,
+input[type="checkbox"].boxkat-accordion-content-toggle:checked ~ .boxkat-accordion-content, {
+    max-height: 1000px;
+}
+.boxkat-accordion-content {
+    width:90%;
+    margin-left:10%;
+    background: #fdd8bc;
+	overflow-y:hidden;
+    max-height: 0;
+	-webkit-transition: max-height 0.3s ease-in-out;
+		-moz-transition: max-height 0.3s ease-in-out;
+			-ms-transition: max-height 0.3s ease-in-out;
+			   -o-transition: max-height 0.3s ease-in-out;
+				 transition: max-height 0.3s ease-in-out;
+				 
+}
+.boxkat-accordion-content > .boxkat-accordion-atom:hover {
+    background: #fba15c;
+	color:white;
+}
+
+.boxkat-accordion-content > .boxkat-accordion-atom > .boxkat-accordion-heading {
+    color:#b97644;
+}
+.boxkat-accordion-content > .boxkat-accordion-atom:hover > .boxkat-accordion-heading {
+	color:white;
+}
+.boxkat-accordion-content > .boxkat-accordion-atom > .boxkat-accordion-subtitle {
+    color:#a04c0c
+}
