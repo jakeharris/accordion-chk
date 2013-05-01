@@ -129,7 +129,7 @@ input[type="checkbox"].boxkat-accordion-content-toggle:checked ~ .boxkat-accordi
 .boxkat-accordion-chk{
 	display:none;
 }
-.boxkat-accordion-atom > .boxkat-accordion-lbl {
+.boxkat-accordion-chk-wrapper {
 	float:right;
 	cursor:pointer;
 }
