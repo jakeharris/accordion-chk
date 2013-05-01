@@ -129,9 +129,16 @@ input[type="checkbox"].boxkat-accordion-content-toggle:checked ~ .boxkat-accordi
 	display:none;
 }
 .boxkat-accordion-atom > .boxkat-accordion-lbl{
-	background: #409737;
+	background: #8bcb84;
 	float: right;
 	font-size:1.4em;
 	padding: .5em .75em .5em .75em;
 	margin: -12px -12px -12px 12px;
+	cursor:pointer;
+}
+.boxkat-accordion-atom > .boxkat-accordion-lbl:hover{
+	background: #409737;
+}
+.boxkat-accordion-atom > .boxkat-accordion-chk:checked + .boxkat-accordion-lbl{
+	background: #409737;
 }
