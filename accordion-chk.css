@@ -95,7 +95,7 @@ input.boxkat-accordion-content-toggle {
 }
 input[type="checkbox"][value="on"].boxkat-accordion-content-toggle ~ .boxkat-accordion-content,
 input[type="checkbox"].boxkat-accordion-content-toggle.checked ~ .boxkat-accordion-content,
-input[type="checkbox"].boxkat-accordion-content-toggle:checked ~ .boxkat-accordion-content, {
+input[type="checkbox"].boxkat-accordion-content-toggle:checked ~ .boxkat-accordion-content {
     max-height: 1000px;
 }
 .boxkat-accordion-content {
